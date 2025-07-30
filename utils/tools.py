@@ -118,7 +118,7 @@ def get_temp_prom(db_temp):
 def digital_twin(entradas_DT):
     entradas_DT_d = entradas_DT.drop(columns='ds')
     booster = xgb.Booster()
-    booster.load_model("IA\modelo_xgb.model")
+    booster.load_model("./IA/modelo_xgb.model")
     dtest = xgb.DMatrix(entradas_DT_d)
     DT = booster.predict(dtest)
     fechas = entradas_DT['ds'].values
