@@ -284,7 +284,7 @@ def seleccionar_unidades(pred, personas, fecha, dia):
     return encendidas, velocidades, mensaje, carga
     
 def calcular_comparativa(db_AA, db_pers, db_t_ext, db_t_int):
-    now = pd.Timestamp.now().floor('15min')
+    now = (pd.Timestamp.now() - pd.Timedelta(hours=5)).floor('15min')
     inicio = now - pd.Timedelta(weeks=1)
     t15 = lambda df: df.with_columns(pl.col("ds").dt.truncate("15m")).filter(pl.col("ds").is_between(inicio, now, closed="both"))
 
