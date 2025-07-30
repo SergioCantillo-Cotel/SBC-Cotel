@@ -101,7 +101,8 @@ def get_climate_data(lat, lon):
     timestamps = [start + i * interval for i in range((end - start) // interval)]
     df_climate = pl.DataFrame({"ds": timestamps,"T2M": r.Variables(0).ValuesAsNumpy(),"RH2M": r.Variables(1).ValuesAsNumpy(),"PRECTOTCORR": r.Variables(2).ValuesAsNumpy()})
     start_filter, now = datetime(2025, 5, 15, 16, 15), datetime.now()
-    df_climate = df_climate.filter((pl.col("ds") >= start_filter) & (pl.col("ds") <= now))
+    df_climate = df_climate.with_columns([(pl.col("ds") - pl.duration(hours=5)).alias("ds")])
+    df_climate = df_climate.filter((pl.col("ds") >= start_filter) & (pl.col("ds") <= now - timedelta(hours=5)))
     print(df_climate)
     return df_climate
 
