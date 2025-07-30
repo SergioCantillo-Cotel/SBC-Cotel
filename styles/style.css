@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+body, h1, h2, h3, h4, h5, h6, p, .stDataFrame, .stButton>button, .stMetricValue {
+    font-family: 'Poppins' !important;
+}
+
+.block-container {
+    padding-top: 0.2rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+[data-testid="stMetric"] {
+    width: fit-content!important;
+    margin: auto;
+}
+
+[data-testid="stMetric"] > div {
+    width: fit-content!important;
+    margin: auto;
+}
+
+[data-testid="stMetricValue"] div[data-testid="stMetricValue"] label {
+    font-family: 'Poppins' !important;
+    font-size: 2.5em !important;
+}
+
+[data-testid="stMetric"] label {
+    width: fit-content!important;
+    font-size:1.3em!important;
+    margin: auto;
+}
+
+div[data-testid="stMetric"] > div:nth-child(2) {
+    font-family: 'Poppins';
+    font-size: 1.8em!important;
+}
+
+.stButton {
+    display: flex;
+    justify-content: center;
+    margin-top: -1em;
+}
+
+.stButton > button {
+    background-color: #fcbf06;
+    border: none;
+    padding: 0.6em 1.2em;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 80%;
+    margin: auto;
+}
+
+.stButton > button:hover {
+    background-color: lightgold;
+    color: white;
+}
+
+label[data-testid="stMetricLabel"] p{
+    font-size: 1.4em !important;
+    font-family: 'Poppins';
+}
+
+div[data-testid="metric-container"] > label[data-testid="stMetricDelta"] > div {
+  	font-size: medium!important;
+    font-family: 'Poppins'
+}
+
+div[data-testid="stMetric"] {
+    padding: 2px;
+    color: white;
+    font-family: 'Poppins';
+}
+
+button[data-baseweb="tab"] p{
+    font-size:16px!important;
+    font-weight: bold;
+    padding:7px;
+}
+
+.st-key-styled_tabs button[aria-selected="true"]{
+    background-color:#eeeeee;
+    border-radius:5px;
+}
+
+.st-key-styled_tabs div[data-baseweb="tab-panel"]{
+    border-radius:5px;
+    padding:7px;
+    background-color:#ffffff;
+}
+
+.st-key-ext-cond, .st-key-int-cond, .st-key-temp-zon, .st-key-nilm-gen,
+.st-key-nilm-subm-0, .st-key-nilm-subm-1, .st-key-nilm-subm-2, 
+.st-key-SBC-RT, .st-key-SBC-BMS, .st-key-SBC-IA, .st-key-SBC-graph-com, .st-key-SBC-impacto{
+    padding: 0.7rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    border-radius: 1rem;
+    margin-bottom: 0rem;
+}
+
+.zonas-lista {
+    font-family: 'Poppins';
+    font-size: 16px;
+    color: #222;
+    line-height: 1.5;
+}
+
+.custom-metric {
+    background-color: #fff;
+    border-radius: 0.5rem;
+    padding: 1rem 1.2rem;
+    text-align: center;
+    font-family: 'Poppins';
+    user-select: none;
+    font-size: 1.1em;
+    line-height: 1.2;
+    margin-bottom: 1.2rem;
+    font-family: 'Poppins';
+}
+
+.custom-metric .label {
+    font-size: 1.1rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.custom-metric .label-mon {
+    font-size: 1.0rem;
+    color: #000;
+    text-align: center;
+    margin-bottom: 0.3rem;
+}
+
+.element-container {
+    margin-bottom: 0.5rem;
+}
+
+.custom-metric .value {
+    font-size: 2.1rem;
+    font-weight: 400;
+    text-align: center;
+    color: #111;
+}
+
+.custom-metric .value-mon {
+    font-size: 1.7rem;
+    font-weight: 200;
+    text-align: left;
+    color: #111;
+}
+
+.custom-metric .delta {
+    font-size: 1.6rem;
+    margin-top: 0.3rem;
+    color: #000;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 0.5rem;
+    text-align: left;
+    font-size: 0.85rem;
+    color: #000;
+    font-family: 'Poppins';
+    box-shadow: 0 -1px 5px rgba(0,0,0,0.05);
+    z-index: 9999;
+}
+
+div[data-baseweb="select"] > div {
+    font-family: 'Poppins';
+    font-size: 14px;
+}
+
+ div[data-baseweb="popover"] li {
+    font-family: 'Poppins';
+    font-size: 14px;
+}
