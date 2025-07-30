@@ -123,7 +123,7 @@ def digital_twin(entradas_DT):
     DT = booster.predict(dtest)
     fechas = entradas_DT['ds'].values
     DT = pd.DataFrame({'ds': fechas, 'Dig_Twin': DT})
-    del entradas_DT, dtest, booster
+    #del entradas_DT, dtest, booster
     return DT
 
 def get_prog_bms(inicio, now):
