@@ -94,7 +94,7 @@ def get_climate_data(lat, lon):
     r = client.weather_api("https://api.open-meteo.com/v1/forecast", params={
         "latitude": lat,"longitude": lon,"models": "gfs_seamless", "timezone": "America/Chicago",
         "minutely_15": ["temperature_2m", "relative_humidity_2m", "precipitation"],
-        "start_date": "2025-05-15","end_date": datetime.now().strftime("%Y-%m-%d")})[0].Minutely15()
+        "start_date": "2025-05-15","end_date": (datetime.now() - timedelta(hours=5)).strftime("%Y-%m-%d")})[0].Minutely15()
 
     start, end = datetime.fromtimestamp(r.Time()), datetime.fromtimestamp(r.TimeEnd())
     interval = timedelta(seconds=r.Interval())
