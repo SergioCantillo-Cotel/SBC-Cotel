@@ -178,8 +178,8 @@ def display_smart_control_gen(db_ocup, db_clim, t_int, db_AA=None, db_Pow=None):
                 
         with tab1.container(key='cont-BMS-IA'):
             start = time.time()
-            dia, pronostico = tools.agenda_bms(RUTA_BMS, pd.Timestamp.now(), personas, t_ext, t_int["mean_value"][-1])
-            unidades, vel, resultado, _ = tools.seleccionar_unidades(pronostico,personas_zona,pd.Timestamp.now(),dia)
+            dia, pronostico = tools.agenda_bms(RUTA_BMS, pd.Timestamp.now() - pd.Timedelta(hours=5), personas, t_ext, t_int["mean_value"][-1])
+            unidades, vel, resultado, _ = tools.seleccionar_unidades(pronostico,personas_zona,pd.Timestamp.now() - pd.Timedelta(hours=5),dia)
             st.info(resultado)
             with st.container(key='SBC-IA'):
                 cols = st.columns(5)
