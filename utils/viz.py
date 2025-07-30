@@ -233,8 +233,8 @@ def display_smart_control_gen(db_ocup, db_clim, t_int, db_AA=None, db_Pow=None):
             with st.container(key='SBC-impacto'):
                 col_a, col_b = st.columns([1,1], vertical_alignment='center')
                 with col_a:
-                    rango_est = col_a.date_input("Periodo de evaluación", (pd.Timestamp.now() - pd.Timedelta(days=7), pd.Timestamp.now()), min_value='2025-06-11', max_value=pd.Timestamp.now() ,key='periodo_estudio')
+                    rango_est = col_a.date_input("Periodo de evaluación", (pd.Timestamp.now() - pd.Timedelta(hours=5) - pd.Timedelta(days=7), pd.Timestamp.now() - pd.Timedelta(hours=5)), min_value='2025-06-11', max_value=pd.Timestamp.now() ,key='periodo_estudio')
                 with col_b:       
-                    fecha_int = col_b.date_input("Fecha de Intervención", pd.Timestamp.now() - pd.Timedelta(days=2), min_value=rango_est[0], max_value=rango_est[1] ,key='fecha_intervencion')
+                    fecha_int = col_b.date_input("Fecha de Intervención", pd.Timestamp.now()  - pd.Timedelta(hours=5) - pd.Timedelta(days=2), min_value=rango_est[0], max_value=rango_est[1] ,key='fecha_intervencion')
                 display_mgen(db_Pow,(rango_est[0], rango_est[1] + pd.Timedelta(days=1)), pd.Timestamp(fecha_int),db_clim[['ds','T2M']],db_ocup[['ds','value']],int_IA,db_Pow,t_int)
                 print(f"Comparativa vs Gemelo digital lista: ejecutada en {time.time() - start:.4f} s") 
