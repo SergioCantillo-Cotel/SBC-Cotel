@@ -1,0 +1,15 @@
+streamlit_autorefresh
+pytz
+polars
+requests_cache
+retry_requests
+openmeteo_requests
+datetime
+plotly
+requests
+scipy
+google-cloud-bigquery
+holidays
+openpyxl
+xgboost
+tdqm
